@@ -185,28 +185,44 @@ A: Um nochmal zurück auf das Thema Supply chain Angriffe zurückzukommen. Wenn 
 
 C: Na jetzt haben sie es aber geschafft mir die SBOMs komplett kaputt zu machen! Das ist ja nur noch sinnloser Aufwand der gar keinen Mehrwert bringt!
 
-## Akt 3
 
-A: Ich kann die Frustration gut nachvollziehen. SBOMs können aber auch einen sinnvollen Einsatz haben. Nur sind sie nicht die silver bullet die man sich oft erhofft. SBOMs werden in vielen Regularien genannt und bilden die Grundlage für sichere Produkte wie z.B. der CRA. Da wir das somit eh machen müssen, sollten wir auch was sinnvolles damit anstellen und nicht nur wie eine Checkbox betrachten.
 
-C: Wie soll dass jetzt funktionieren? All meine Ideen haben sie zerrissen...
 
-A: In der Software Entwicklung ist ein thema von vitaler Wichtigkeit: Dependencies tracken. Entwicklungsteams müssen ihre Abhängigkeiten managen, updaten, patchen und warten. Wenn Componenten z.B. End-of-life gehen müssen diese ausgetauscht werden und man muss nicht nur den selbst-geschriebenen Code absichern, sondern vielmehr die Abhängigkeiten.
 
-C: Das klingt aber nach nichts neuem...
 
-A: Ist es auch nicht, durch die Einführung von SBOMs ist dieses Thema wieder in den Vordergrund getreten. Die Notwendigkeit einer ordentlichen Inventarisierung von Software gibt es schon seit einiger Zeit.
 
-C: Aber was soll das dann konkret bringen?
 
-A: Naja, eine sinnvolle Inventarisierung gekoppelt mit entsprechender Governance rund um das Monitoring, Schwachstellen Management wie es schon auf Infrastruktur erfolgt auf die Software anwenden -> dies gibt einem Unternehmen eine sehr gute visibility in die Software und kann dann auch darauf besser reagieren. Und ja, mit einem ordentlichen Inventar, kann man sich bei einer kritischen zero-day lücke wie log4j das Leben leichter machen und schneller identifizieren wo diese zu finden ist, allerdings nur unter der Annahme dass die SBOMs gepflegt, richtig, zentral durchsuchbar und up to date sind.
 
-C: *nachdenklich*
+## Akt 3 [10min]
 
-A: Wenn man dann die Hausaufgaben gemacht hat, kann man auch anfangen mit SBOMs zu Arbeiten. Z.B. indem man die Infromationen der SBOM wie vulnerabilities mit in ein DAST tool fließen lässt um z.B. die Exploitability zu überprüfen und das Produkt zu verbessen.
+- Ist also alles Blödsinn?
 
-C: 
+- Nein, Inventarisierung (ob jetzt mit SBOMs oder nicht) ist ja trotzdem eine gute Sache. Wir wollen ja trotzdem wissen, welche Komponenten in unserer Software enthalten sind und ob es darin irgendwelche Schwachstellen zu beheben gibt. --> Software Composition Analysis
 
-Q&A
+- ...aber dann nicht mit SBOMs?
 
-5 Minuten
+- Eventuell doch, weil NIS2, CRA, DORA, EO 14028,... aber dann halt auch richtig --> SBOM Management
+
+- Developer Awareness zur Auswahl von Abhängigkeiten - besser wenige aber gute Dependencies (--> OpenSSF ScoreCard)
+
+- Governance/Monitoring Regelmäßig tracken und upgraden (--> Veraltete Versionen von log4j)
+
+- Lizenzmanagement
+
+- Build Step Attestations
+
+[...]
+
+C: Großartig! Toll dass Sie da auch meiner Meinung sind!
+
+[C schaut auf's Handy]
+
+C: Oh, entschuldigen Sie bitte, da muss ich rangehen. Arbeiten Sie mir dann bitte mal ein Konzept aus, wie wir die besprochenen Sachen alle im nächsten Quartal umsetzen können. Schaffen Sie das bis nächste Woche?
+
+[C nimmt Handy ans Ohr]
+
+C: Ja Tachchen Hermann! Du, wir machen jetzt auch SBOMs... ja, richtig, die Supply Chain Attacken sind damit abgewehrt
+
+[A schlägt die Hände vor's Gesicht]
+
+# Q&A [5min]
